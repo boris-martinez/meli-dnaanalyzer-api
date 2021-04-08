@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meli.DNAAnalyzer.API", "src\Meli.DNAAnalyzer.API\Meli.DNAAnalyzer.API.csproj", "{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meli.DNAAnalyzer.UnitTests", "src\Meli.DNAAnalyzer.UnitTests\Meli.DNAAnalyzer.UnitTests.csproj", "{6D6168F3-8792-4331-829B-C67974E8B841}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6168F3-8792-4331-829B-C67974E8B841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6168F3-8792-4331-829B-C67974E8B841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6168F3-8792-4331-829B-C67974E8B841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6168F3-8792-4331-829B-C67974E8B841}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F541BC24-26C6-4B3D-AD03-8B19E3CD54ED}
+	EndGlobalSection
+EndGlobal
