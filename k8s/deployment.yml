@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: meli-dnaanalyzer-api
-        image: melitest.azurecr.io/meli-dnaanalyzer-api:c2c5221d9a0e40ec2b5d184ce364fb8ac0bfcb21
+        image: 
         livenessProbe:
           httpGet:
             path: /health
@@ -33,4 +33,4 @@ spec:
         ports:
         - containerPort: 80
       imagePullSecrets:
-      - name: registrosatrack
+      - name: 
