@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY_NAME: mutant
+  REGISTRY_NAME: melitest 
   CLUSTER_NAME: meliakstest
   CLUSTER_RESOURCE_GROUP: mutant
   NAMESPACE: mutant
