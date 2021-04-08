@@ -14,11 +14,11 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY_NAME: {registry-name}
-  CLUSTER_NAME: {cluster-name}
-  CLUSTER_RESOURCE_GROUP: {resource-group-name}
-  NAMESPACE: {namespace-name}
-  APP_NAME: {app-name}
+  REGISTRY_NAME: mutant
+  CLUSTER_NAME: meliakstest
+  CLUSTER_RESOURCE_GROUP: mutant
+  NAMESPACE: mutant
+  APP_NAME: meli-dnaanalyzer-api
   
 jobs:
   build:
