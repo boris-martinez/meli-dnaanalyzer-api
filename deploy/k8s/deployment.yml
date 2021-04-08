@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: meli-dnaanalyzer-api
-        image: xxx
+        image: xxx/xxx:xxx
         livenessProbe:
           httpGet:
             path: /health
