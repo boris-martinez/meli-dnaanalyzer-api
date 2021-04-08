@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meli-dnaanalyzer-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meli-dnaanalyzer-api
+  template:
+    metadata:
+      labels:
+        app: meli-dnaanalyzer-api
+    spec:
+      containers:
+      - name: meli-dnaanalyzer-api
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 120
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /liveness
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Test"
+        ports:
+        - containerPort: 80
