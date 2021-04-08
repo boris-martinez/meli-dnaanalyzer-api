@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: meli-dnaanalyzer-api
-        image: xxx/xxx:xxx
+        image:melitest.azurecr.io/meli-dnaanalyzer-api:c2c5221d9a0e40ec2b5d184ce364fb8ac0bfcb22
         livenessProbe:
           httpGet:
             path: /health
