@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Meli.DNAAnalyzer.API.Domain.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -15,11 +16,14 @@ namespace Meli.DNAAnalyzer.API.Application.Controllers
     {
 
         private readonly ILogger<MutantController> logger;
+        private readonly IDnaAnalyzerService dnaAnalyzerService;
 
-        public MutantController(ILogger<MutantController> logger)
+        public MutantController(ILogger<MutantController> logger, IDnaAnalyzerService dnaAnalyzerService)
         {
             this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            this.dnaAnalyzerService = dnaAnalyzerService ?? throw new ArgumentNullException(nameof(dnaAnalyzerService));
         }
+
         /// <summary>
         /// Detecta si un humano es mutante basandose en su secuencia de ADN
         /// </summary>
@@ -31,7 +35,8 @@ namespace Meli.DNAAnalyzer.API.Application.Controllers
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         public async Task<ActionResult> DetectMutant([FromBody] List<string> dna)
         {
-            return Ok();
+            bool isMutant = await this.dnaAnalyzerService.IsMutant(dna);
+            return isMutant ? StatusCode(200,String.Empty) : StatusCode(403, null);
         }
     }
 }

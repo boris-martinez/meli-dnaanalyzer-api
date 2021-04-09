@@ -28,12 +28,20 @@ namespace Meli.DNAAnalyzer.API.Application.Filters
             {
                 Message = context.Exception.ToString(),
                 Path = context.HttpContext.Request.Path,
-                InnerCode = "ERR03"
+                CreatedDate = DateTime.UtcNow
             };
 
             context.Result = new ErrorObjectResult(faultMessage);
-            context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+            context.HttpContext.Response.StatusCode = (int)BuildHttpCode(context.Exception);
             context.ExceptionHandled = true;
+        }
+
+        public HttpStatusCode BuildHttpCode(Exception ex) {
+
+            if (ex is ArgumentException)
+                return HttpStatusCode.BadRequest;
+            else
+                return HttpStatusCode.InternalServerError;
         }
 
         public class ErrorObjectResult : ObjectResult

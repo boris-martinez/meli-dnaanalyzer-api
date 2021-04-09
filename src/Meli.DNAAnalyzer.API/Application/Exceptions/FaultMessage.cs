@@ -1,4 +1,6 @@
-﻿namespace Meli.DNAAnalyzer.API.Application.Exceptions
+﻿using System;
+
+namespace Meli.DNAAnalyzer.API.Application.Exceptions
 {
     public class FaultMessage
     {
@@ -6,9 +8,7 @@
 
         public string Path { set; get; }
 
-        public string InnerCode { set; get; }
-
-        public int HttpCode { set; get; }
+        public DateTime CreatedDate {get;set;}
 
     }
 }
