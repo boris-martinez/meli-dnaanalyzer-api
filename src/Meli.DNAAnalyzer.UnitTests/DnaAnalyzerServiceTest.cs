@@ -30,7 +30,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
         [TestMethod]
@@ -56,7 +56,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
@@ -70,7 +70,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
         [TestMethod]
@@ -83,7 +83,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
@@ -97,7 +97,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
@@ -245,7 +245,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
@@ -261,7 +261,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
@@ -276,7 +276,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
 
             //Then
-            Assert.IsTrue(actual);
+            Assert.IsFalse(actual);
         }
 
 
