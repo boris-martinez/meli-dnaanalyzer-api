@@ -13,22 +13,20 @@ namespace Meli.DNAAnalyzer.API.Infraestructure.Adapters.Messaging
 {
     public class IntegrationEventService : IIntegrationEventService
     {
-        private readonly ApplicationSettings settings;
+        private readonly EventHubProducerClient producerClient;
 
         public IntegrationEventService(IOptions<ApplicationSettings> settings) {
 
-            this.settings = settings?.Value ?? throw new ArgumentNullException(nameof(settings));
+            ApplicationSettings _settings = settings?.Value ?? throw new ArgumentNullException(nameof(settings));
+            this.producerClient = new EventHubProducerClient(_settings.EventHubSettings.ConnectionString, _settings.EventHubSettings.EventHubName);
         }
 
         public async Task Publish(IntegrationEvent integrationEvent)
         {
             //todo: implementar resilencia
-            await using (var producerClient = new EventHubProducerClient(this.settings.EventHubSettings.ConnectionString, this.settings.EventHubSettings.EventHubName))
-            {
-                using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
-                eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes(integrationEvent.ToString())));
-                await producerClient.SendAsync(eventBatch);
-            }
+            using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
+            eventBatch.TryAdd(new EventData(Encoding.UTF8.GetBytes(integrationEvent.ToString())));
+            await producerClient.SendAsync(eventBatch);
         }
     }
 }
