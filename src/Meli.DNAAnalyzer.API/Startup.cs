@@ -32,7 +32,7 @@ namespace Meli.DNAAnalyzer.API
                 .AddCorsExtension()
                 .AddResponseCompression()
                 .AddSwaggerExtension(Configuration)
-                //.AddMediatorExtension()
+                .AddMediatorExtension()
                 .AddDependenciesExtension(Configuration);
 
             var container = new ContainerBuilder();

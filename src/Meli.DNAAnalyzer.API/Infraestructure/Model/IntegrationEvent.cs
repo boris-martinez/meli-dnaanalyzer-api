@@ -19,5 +19,10 @@ namespace Meli.DNAAnalyzer.API.Infraestructure.Model
             Id = Guid.NewGuid();
             CreationDate = DateTime.UtcNow;
         }
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
     }
 }

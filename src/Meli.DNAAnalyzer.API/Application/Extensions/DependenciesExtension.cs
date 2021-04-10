@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Meli.DNAAnalyzer.API.Domain.Contracts;
+using Meli.DNAAnalyzer.API.Domain.Dto;
 using Meli.DNAAnalyzer.API.Domain.Services;
 using Meli.DNAAnalyzer.API.Infraestructure.Adapters.Messaging;
 using Meli.DNAAnalyzer.API.Infraestructure.Adapters.Persistance;
@@ -14,9 +15,7 @@ namespace Meli.DNAAnalyzer.API.Application.Extensions
         public static IServiceCollection AddDependenciesExtension(this IServiceCollection services, IConfiguration configuration)
         {
             //Settings
-            //services.Configure<ApplicationSettings>(configuration);
-
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.Configure<ApplicationSettings>(configuration);
 
             //Domain
             services.AddSingleton<INotificationService, NotificationService>();

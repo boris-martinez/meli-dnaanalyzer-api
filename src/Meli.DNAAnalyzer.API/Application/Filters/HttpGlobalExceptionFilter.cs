@@ -26,7 +26,7 @@ namespace Meli.DNAAnalyzer.API.Application.Filters
 
             var faultMessage = new FaultMessage()
             {
-                Message = context.Exception.ToString(),
+                Message = context.Exception.Message,
                 Path = context.HttpContext.Request.Path,
                 CreatedDate = DateTime.UtcNow
             };
