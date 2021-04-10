@@ -133,5 +133,29 @@ namespace Meli.DNAAnalyzer.UnitTests.Util
 
             return new List<string> { "One", "Two", "Three" };
         }
+
+        public static List<string> BuildDna22()
+        {
+
+            return new List<string> { "One", "Two", "Three" };
+        }
+
+        public static List<string> BuildDna23()
+        {
+
+            return new List<string> { "One", "Two", "Three" };
+        }
+
+        public static List<string> BuildDna24()
+        {
+
+            return new List<string> { "One", "Two", "Three" };
+        }
+
+        public static List<string> BuildDna25()
+        {
+
+            return new List<string> { "One", "Two", "Three" };
+        }
     }
 }

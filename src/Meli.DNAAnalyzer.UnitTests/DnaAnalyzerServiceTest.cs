@@ -3,6 +3,7 @@ using Meli.DNAAnalyzer.API.Domain.Services;
 using Meli.DNAAnalyzer.UnitTests.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System;
 using System.Collections.Generic;
 
 namespace Meli.DNAAnalyzer.UnitTests
@@ -319,6 +320,54 @@ namespace Meli.DNAAnalyzer.UnitTests
 
             //Then
             Assert.IsTrue(actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void test_case_22()
+        {
+            //Given
+            var dna = DnaFactory.BuildDna22();
+
+            //When
+            this.dnaAnalyzerService.IsMutant(dna).Wait();
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void test_case_23()
+        {
+            //Given
+            var dna = DnaFactory.BuildDna23();
+
+            //When
+            this.dnaAnalyzerService.IsMutant(dna).Wait();
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void test_case_24()
+        {
+            //Given
+            var dna = DnaFactory.BuildDna24();
+
+            //When
+            this.dnaAnalyzerService.IsMutant(dna).Wait();
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void test_case_25()
+        {
+            //Given
+            var dna = DnaFactory.BuildDna25();
+
+            //When
+            this.dnaAnalyzerService.IsMutant(dna).Wait();
+
         }
     }
 }
