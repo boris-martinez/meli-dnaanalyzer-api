@@ -12,6 +12,7 @@ namespace Meli.DNAAnalyzer.API.Domain.Entities
         public string[,] BidimensionalArray { get; private set; }
         public int RowsCount { get; private set; }
         public int ColumnsCount { get; private set; }
+        
 
         public Matrix(List<string> values)
         {
@@ -38,13 +39,23 @@ namespace Meli.DNAAnalyzer.API.Domain.Entities
                 if (values[x].Length == columns)
                 {
                     for (int y = 0; y < values[x].Length; y++) {
-
+                        this.ValidateNitrogenousBase(values[x][y]);
                         this.BidimensionalArray[x, y] = values[x][y].ToString();
                     }
                 }
                 else 
                     throw new ArgumentException("All values must contains the same quantity of chars");
             }
+        }
+
+        private void ValidateNitrogenousBase(char nitrogenousBase) {
+
+
+            char[] NITROGENOUS_BASE = new char[] { 'A', 'T','C','G' };
+
+
+            if (!NITROGENOUS_BASE.Contains(nitrogenousBase))
+                throw new ArgumentException($"Invalid nitrogenous base: '{nitrogenousBase}'");
         }
 
         private void FindSequence(Index index, string value, ref List<Index> ocurrences, SequenceType sequenceType)
