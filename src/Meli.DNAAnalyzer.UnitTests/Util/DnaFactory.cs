@@ -53,7 +53,7 @@ namespace Meli.DNAAnalyzer.UnitTests.Util
         public static List<string> BuildDna8()
         {
 
-            return new List<string> { "AAAA","AGTC","ATCG","AAAA" };
+            return new List<string> { "AAAA","GGTC","ATCG","AAAA" };
         }
 
         public static List<string> BuildDna9()
@@ -71,13 +71,13 @@ namespace Meli.DNAAnalyzer.UnitTests.Util
         public static List<string> BuildDna11()
         {
 
-            return new List<string> { "AAAA","CACA","CTAA","CTCA" };
+            return new List<string> { "AAAA","CTCA","CTAA","CTCA" };
         }
 
         public static List<string> BuildDna12()
         {
 
-            return new List<string> { "ATCA","CACA","CTAA","AAAA" };
+            return new List<string> { "ATCA","CTCA","CTAA","AAAA" };
         }
 
         public static List<string> BuildDna13()
@@ -101,7 +101,7 @@ namespace Meli.DNAAnalyzer.UnitTests.Util
         public static List<string> BuildDna16()
         {
 
-            return new List<string> { "ATCGATCGGG","AGTCAGTCCC","ATCGATCGGG","AGTCCGTCCC","ATCGATCGGG","AGTCAGTCCC","ATCGATCGGG","TGTCCGTCCC","CGTCCGTCCC","GGTCCGTCCC" };
+            return new List<string> { "ATCGATCGGG","AGTCAGTCCC","ATCGATCGGG","AGTCCGTCCC","ATCGATCGGG","AGTCAGTCCC","ATCGATAGGG","TGTCCGTCCC","CGTCCGTCCC","GGTCCGTCCC" };
         }
 
         public static List<string> BuildDna17()

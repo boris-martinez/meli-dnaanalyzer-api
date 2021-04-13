@@ -28,7 +28,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna1();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -41,7 +41,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna2();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -54,7 +54,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna3();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -68,7 +68,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna4();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -81,7 +81,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna5();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -95,7 +95,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna6();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -109,7 +109,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna7();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -123,7 +123,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna8();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -138,7 +138,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna9();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -153,7 +153,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna10();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -168,7 +168,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna11();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -183,7 +183,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna12();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -198,7 +198,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna13();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -213,7 +213,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna14();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -228,7 +228,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna15();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -243,7 +243,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna16();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -259,7 +259,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna17();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -274,7 +274,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna18();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsFalse(actual);
@@ -289,7 +289,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna19();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -303,7 +303,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna20();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -316,7 +316,7 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna21();
 
             //When
-            var actual = this.dnaAnalyzerService.IsMutant(dna).Result;
+            var actual = this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
             //Then
             Assert.IsTrue(actual);
@@ -330,20 +330,28 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna22();
 
             //When
-            this.dnaAnalyzerService.IsMutant(dna).Wait();
+            try
+            {
+                this.dnaAnalyzerService.AnalyzeDna(dna).Wait();
+            }
+            catch (AggregateException ex) {
+
+                throw ex.InnerException;
+            }
 
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void test_case_23()
         {
             //Given
             var dna = DnaFactory.BuildDna23();
 
             //When
-            this.dnaAnalyzerService.IsMutant(dna).Wait();
+            var actual =  this.dnaAnalyzerService.AnalyzeDna(dna).Result;
 
+            //Then
+            Assert.IsFalse(actual);
         }
 
         [TestMethod]
@@ -354,7 +362,15 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna24();
 
             //When
-            this.dnaAnalyzerService.IsMutant(dna).Wait();
+            try
+            {
+                this.dnaAnalyzerService.AnalyzeDna(dna).Wait();
+            }
+            catch (AggregateException ex)
+            {
+
+                throw ex.InnerException;
+            }
 
         }
 
@@ -366,7 +382,15 @@ namespace Meli.DNAAnalyzer.UnitTests
             var dna = DnaFactory.BuildDna25();
 
             //When
-            this.dnaAnalyzerService.IsMutant(dna).Wait();
+            try
+            {
+                this.dnaAnalyzerService.AnalyzeDna(dna).Wait();
+            }
+            catch (AggregateException ex)
+            {
+
+                throw ex.InnerException;
+            }
 
         }
     }

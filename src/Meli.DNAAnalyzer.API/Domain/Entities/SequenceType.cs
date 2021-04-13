@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 
 namespace Meli.DNAAnalyzer.API.Domain.Entities
 {
-    public class Result
+    public enum SequenceType
     {
-        public bool IsMutant { get; private set; }
-
-        public Result(bool isMutant) {
-
-            this.IsMutant = IsMutant;
-        }
+        HORIZONTAL,
+        VERTICAL,
+        OBLIQUE_RIGHT,
+        OBLIQUE_LEFT
     }
 }

@@ -7,6 +7,6 @@ namespace Meli.DNAAnalyzer.API.Domain.Contracts
 {
     public interface IDnaAnalyzerService
     {
-        Task<bool> IsMutant(List<string> dna);
+        Task<bool> AnalyzeDna(List<string> dna);
     }
 }

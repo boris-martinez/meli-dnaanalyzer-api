@@ -35,7 +35,7 @@ namespace Meli.DNAAnalyzer.API.Application.Controllers
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
         public async Task<ActionResult> DetectMutant([FromBody] List<string> dna)
         {
-            bool isMutant = await this.dnaAnalyzerService.IsMutant(dna);
+            bool isMutant = await this.dnaAnalyzerService.AnalyzeDna(dna);
             return isMutant ? StatusCode(200,String.Empty) : StatusCode(403, null);
         }
     }
