@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: meli-dnaanalyzer-api
 spec:
-  replicas: 2
+  replicas: 20
   selector:
     matchLabels:
       app: meli-dnaanalyzer-api
