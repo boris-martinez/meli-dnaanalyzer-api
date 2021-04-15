@@ -14,7 +14,7 @@ namespace Meli.DNAAnalyzer.API.Application.ViewModel
         [JsonProperty("count_human_dna")]
         public long NoMutantCount { get; set; }
 
-        [JsonProperty("ratio")]
-        public double Ratio { get; set; }
+        [JsonProperty("ratio", NullValueHandling = NullValueHandling.Ignore)]
+        public double? Ratio { get; set; }
     }
 }

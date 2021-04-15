@@ -16,11 +16,12 @@ namespace Meli.DNAAnalyzer.API.Domain.Entities
             this.NoMutantCount = NoMutantCount;
         }
 
-        public double GetRatio()
+        public double? GetRatio()
         {
-            //todo: Calcular ratio
-            double ratio = 0.4;
-            return ratio;
+            if (this.MutantCount == 0 || this.NoMutantCount == 0)
+                return null;
+            else
+                return (double)this.MutantCount / this.NoMutantCount;
         }
     }
 }

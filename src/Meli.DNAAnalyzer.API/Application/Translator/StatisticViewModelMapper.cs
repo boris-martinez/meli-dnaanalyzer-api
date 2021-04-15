@@ -14,12 +14,18 @@ namespace Meli.DNAAnalyzer.API.Application.Translator
 
         public static StatisticViewModel Map(Statistic statistic)
         {
-            return new StatisticViewModel()
+            StatisticViewModel statisticViewModel = new StatisticViewModel()
             {
                 MutantCount = statistic.MutantCount,
-                NoMutantCount = statistic.NoMutantCount,
-                Ratio = statistic.GetRatio()
+                NoMutantCount = statistic.NoMutantCount
             };
+
+            double? ratio = statistic.GetRatio();
+
+            if (ratio.HasValue)
+                statisticViewModel.Ratio = Math.Round(ratio.Value, 1);
+
+            return statisticViewModel;
         }
     }
 }
