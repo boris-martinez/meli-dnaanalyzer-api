@@ -10,5 +10,6 @@ namespace Meli.DNAAnalyzer.API.Domain.Dto
     public class ApplicationSettings
     {
         public EventHubSettings EventHubSettings { get; set; }
+        public ElasticsearchSettings ElasticsearchSettings { get; set; }
     }
 }
