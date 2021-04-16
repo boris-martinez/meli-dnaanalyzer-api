@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meli.DNAAnalyzer.API", "src\Meli.DNAAnalyzer.API\Meli.DNAAnalyzer.API.csproj", "{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meli.DNAAnalyzer.API", "src\Meli.DNAAnalyzer.API\Meli.DNAAnalyzer.API.csproj", "{EB5D4B0E-14DD-408F-93F0-5049C9172E6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meli.DNAAnalyzer.UnitTests", "src\Meli.DNAAnalyzer.UnitTests\Meli.DNAAnalyzer.UnitTests.csproj", "{6D6168F3-8792-4331-829B-C67974E8B841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meli.DNAAnalyzer.UnitTests", "src\Meli.DNAAnalyzer.UnitTests\Meli.DNAAnalyzer.UnitTests.csproj", "{6D6168F3-8792-4331-829B-C67974E8B841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meli.DNAAnalyzer.IntegrationTests", "src\Meli.DNAAnalyzer.IntegrationTests\Meli.DNAAnalyzer.IntegrationTests.csproj", "{5D4ED472-401A-43D2-9804-B286F6C93B61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A336527-EB5F-4D1E-B079-0E2A019F7BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5D4B0E-14DD-408F-93F0-5049C9172E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5D4B0E-14DD-408F-93F0-5049C9172E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5D4B0E-14DD-408F-93F0-5049C9172E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5D4B0E-14DD-408F-93F0-5049C9172E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D6168F3-8792-4331-829B-C67974E8B841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D6168F3-8792-4331-829B-C67974E8B841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6168F3-8792-4331-829B-C67974E8B841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6168F3-8792-4331-829B-C67974E8B841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4ED472-401A-43D2-9804-B286F6C93B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4ED472-401A-43D2-9804-B286F6C93B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4ED472-401A-43D2-9804-B286F6C93B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4ED472-401A-43D2-9804-B286F6C93B61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
