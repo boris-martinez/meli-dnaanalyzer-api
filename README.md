@@ -209,4 +209,4 @@ Se construyó una tubería de despliegue al AKS de pruebas, con el fin de realiz
 
 *Health Check Enpoint:* http://52.151.201.4/health
 
-*Open Api Endpoint*: http://52.151.201.4/index.html
+*Open Api Endpoint*: http://52.151.201.4/swagger/index.html
