@@ -31,7 +31,9 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">[&quot;AAAA&quot;,&quot;GGTC&quot;,&quot;ATCG&quot;,&quot;AAAA&quot;]</stringProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;dna&quot;:[&quot;ATGCGTCGGG&quot;,&quot;TAACGGTCCC&quot;,&quot;GTAGGTCGGG&quot;,&quot;TGCAGGTCCC&quot;,&quot;CCCCATCGGG&quot;,&quot;AGTCAGTCCC&quot;,&quot;ATCGATCGGG&quot;,&quot;TGTCCGTCCC&quot;,&quot;CGTCCGTCCC&quot;,&quot;GGTCCGTCCC&quot;]&#xd;
+}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
