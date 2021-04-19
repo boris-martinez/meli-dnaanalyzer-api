@@ -109,7 +109,7 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
    
 
-7. Se asume que las pruebas unitarias relacionadas con el dominio fueron aprobadas por el dueño del producto. [Ver](docs/CasosPruebas.xlsx) documento de pruebas unitarias.
+7. Se asume que las pruebas unitarias relacionadas con el dominio fueron aprobadas por el dueño del producto. [Ver documento de pruebas unitarias](docs/CasosPruebas.xlsx) .
 
    
 
@@ -130,9 +130,13 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 ### Vista de Despliegue
 
-diagrama
+![context-view](docs/img/Arquitecture.png)
 
+*Cluster AKS:* Un nodo tipo Standard_DS2_v2, 2 vCPUs, 7 GiB de memoria Ram.
 
+*Cluster Logstach*: Un nodo tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
+
+*Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
 
 # Devops
 ### Build
