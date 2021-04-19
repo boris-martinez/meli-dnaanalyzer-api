@@ -187,9 +187,11 @@ dotnet test
 cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.IntegrationTests
 ```
 
-9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. 
+9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. Si la ejecución de las pruebas unitarias se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
 
-10. Ejecutar las pruebas de carga a través de [JMeter](https://jmeter.apache.org/) configurando el plan [DnaAnalyzer.jmx](src/Meli.DNAAnaluzer.LoadTests/DnaAnalyzer.jmx).
+![tests](docs/img/IntegrationTests.png)
+
+9. Ejecutar las pruebas de carga a través de [JMeter](https://jmeter.apache.org/) configurando el plan [DnaAnalyzer.jmx](src/Meli.DNAAnaluzer.LoadTests/DnaAnalyzer.jmx).
 
 
 
