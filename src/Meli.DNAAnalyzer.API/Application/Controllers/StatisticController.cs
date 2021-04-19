@@ -1,5 +1,5 @@
-﻿using Meli.DNAAnalyzer.API.Application.Translator;
-using Meli.DNAAnalyzer.API.Application.ViewModel;
+﻿using Meli.DNAAnalyzer.API.Application.Dto.ViewModel;
+using Meli.DNAAnalyzer.API.Application.Translator;
 using Meli.DNAAnalyzer.API.Domain.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

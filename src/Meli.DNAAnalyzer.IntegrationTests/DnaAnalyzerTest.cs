@@ -1,3 +1,4 @@
+using Meli.DNAAnalyzer.API.Application.Dto.Command;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net;
@@ -51,14 +52,14 @@ namespace Meli.DNAAnalyzer.IntegrationTests
 
         string BuildNoMutantDna()
         {
-            var dna = new List<string> { "ATCG", "AGTC", "ATCG", "AGTC" };
-            return JsonConvert.SerializeObject(dna);
+            var validateDnaCommand = new ValidateDnaCommand { Dna = new List<string> { "ATCG", "AGTC", "ATCG", "AGTC" } };
+            return JsonConvert.SerializeObject(validateDnaCommand);
         }
 
         string BuildMutantDna()
         {
-            var dna = new List<string> { "ATCGATCGGG", "AGTCAGTCCC", "ATCGATCGGG", "AGTCCGTCCC", "AAAAATCGGG", "AGTCAGTCCC", "ATCGATCGGG", "AGTCCGTCCC", "CGTCCGTCCC", "GGTCCGTCCC" };
-            return JsonConvert.SerializeObject(dna);
+            var validateDnaCommand = new ValidateDnaCommand { Dna = new List<string> { "ATCGATCGGG", "AGTCAGTCCC", "ATCGATCGGG", "AGTCCGTCCC", "AAAAATCGGG", "AGTCAGTCCC", "ATCGATCGGG", "AGTCCGTCCC", "CGTCCGTCCC", "GGTCCGTCCC" } };
+            return JsonConvert.SerializeObject(validateDnaCommand);
         }
     }
 }

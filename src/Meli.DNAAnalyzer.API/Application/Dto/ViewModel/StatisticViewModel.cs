@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Meli.DNAAnalyzer.API.Application.ViewModel
+namespace Meli.DNAAnalyzer.API.Application.Dto.ViewModel
 {
     public class StatisticViewModel
     {

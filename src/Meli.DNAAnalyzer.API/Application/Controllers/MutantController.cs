@@ -1,4 +1,5 @@
-﻿using Meli.DNAAnalyzer.API.Domain.Contracts;
+﻿using Meli.DNAAnalyzer.API.Application.Dto.Command;
+using Meli.DNAAnalyzer.API.Domain.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -33,9 +34,9 @@ namespace Meli.DNAAnalyzer.API.Application.Controllers
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.Forbidden)]
-        public async Task<ActionResult> DetectMutant([FromBody] List<string> dna)
+        public async Task<ActionResult> DetectMutant([FromBody] ValidateDnaCommand validateDnaCommand)
         {
-            bool isMutant = await this.dnaAnalyzerService.AnalyzeDna(dna);
+            bool isMutant = await this.dnaAnalyzerService.AnalyzeDna(validateDnaCommand.Dna);
             return isMutant ? StatusCode(200,String.Empty) : StatusCode(403, null);
         }
     }

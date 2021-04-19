@@ -20,6 +20,9 @@ namespace Meli.DNAAnalyzer.API.Domain.Entities
         }
 
         private void Parse(List<string> values) {
+            
+            if(values ==null)
+                throw new ArgumentException("Dna must be a no nullable value");
 
             if (values.Count == 0)
                 throw new ArgumentException("Input values must be greather than zero");
