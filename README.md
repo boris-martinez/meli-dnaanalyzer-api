@@ -134,9 +134,9 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 *Cluster AKS:* Un nodo tipo Standard_DS2_v2, 2 vCPUs, 7 GiB de memoria Ram. Se crean 5 replicas (POD) para balancear la carga.
 
-*Cluster Logstach*: Un nodo tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
+*Cluster Logstach*: Un nodo tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram. Se despliega pipeline de procesamiento descrito en el archivo [logstash.conf](deploy/logstash/logstash.conf).
 
-*Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram. Se despliega pipeline de procesamiento descrito en el archivo [logstash.conf](deploy/logstash/logstash.conf).
+*Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram. 
 
 # Devops
 ### Build and Tests
