@@ -132,24 +132,74 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 ![context-view](docs/img/Arquitecture.png)
 
-*Cluster AKS:* Un nodo tipo Standard_DS2_v2, 2 vCPUs, 7 GiB de memoria Ram.
+*Cluster AKS:* Un nodo tipo Standard_DS2_v2, 2 vCPUs, 7 GiB de memoria Ram. Se crean 5 replicas (POD) para balancear la carga.
 
 *Cluster Logstach*: Un nodo tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
 
 *Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
 
 # Devops
-### Build
+### Build and Tests
 
+El DNA Analyzer API corre sobre [.NET Core 3.1](https://dotnet.microsoft.com/download) , por lo tanto asegurarse de tener instalado dicho framework en la maquina donde se va a compilar.  Para compilar y ejecutar las pruebas seguir las siguientes pasos:
 
+1. Clonar el proyecto del repositorio de código fuente en cualquier carpeta de su maquina local:
 
-### Tests
+```
+git clone https://github.com/boris-martinez/meli-dnaanalyzer-api.git
+```
 
+2. Ingresar a la carpeta Meli.DNAAnalyzer.API:
 
+```
+cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.API 
+```
+
+3. Realizar la compilación
+
+```
+dotnet build
+```
+
+4. Si el proceso de build se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
+
+![context-view](docs/img/build.png)
+
+5. Para ejecutar las pruebas unitarias, ingresar a la carpeta que contiene las pruebas unitarias: Meli.DNAAnalyzer.UnitTests
+
+```
+cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.UnitTests
+```
+
+6. Ejecutar las pruebas unitarias
+
+```
+dotnet test
+```
+
+7. Si la ejecución de las pruebas unitarias se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
+
+![context-view](docs/img/tests.png)
+
+8. Para ejecutar las pruebas de integración, primero se debe verificar que toda la infraestructura esté correctamente desplegada y operativa. En caso de que si, ingresar a la carpeta que contiene las pruebas de integración: Meli.DNAAnalyzer.IntegrationTests
+
+```
+cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.IntegrationTests
+```
+
+9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. 
 
 ### Release
 
+Se construyó una tubería de despliegue al AKS de pruebas, con el fin de realizar entrega continua al ambiente de pruebas en la medida que el API se iba construyendo. Esto ayudó a ser muy eficientes en el proceso de despliegue y validar muy rápidamente los cambios que se iban haciendo iterativamente. El workflow está descrito en el archivo [meli-dnaanalyzer-api.yml](.github/workflows/meli-dnaanalyzer-api.yml) y se resume a continuación:
 
+1. Se construye imagen a partir del DockerFile.
+2. Se envía imagen al ACR de pruebas desplegado en Azure.
+3. Se crea namespace *mutant* en aks de pruebas.
+4. Se crea pull secret en namespace *mutant* con el fin de poder conectarse al ACR y obtener la imagen.
+5. Se crea deployment y service en aks de prueba mediante los archivos [deployment.yml](deploy/k8s/deployment.yml) y  [service.yml](deploy/k8s/service.yml).
+
+![context-view](docs/img/release.png)
 
 # Access Endpoint
 
