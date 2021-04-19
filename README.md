@@ -153,8 +153,6 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 # Access Endpoint
 
-TODO: Describe and show how to build your code and run the tests. 
+*Health Check Enpoint:* http://52.151.201.4/health
 
-[Health Check Enpoint]: www.google.com	"Healtch Check Enpodint"
-[Open Api Endpoint]: www.google.com	"Swagger"
-
+*Open Api Endpoint*: http://52.151.201.4/index.html
