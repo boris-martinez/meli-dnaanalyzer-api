@@ -7,7 +7,7 @@ En donde recibirás como parámetro un array de Strings que representan cada fil
 
 
 
-![context-view](docs/img/img1.png)
+![example](docs/img/img1.png)
 
 Sabrás si un humano es mutante, si encuentras **más de una secuencia de cuatro letras iguales**, de forma oblicua, horizontal o vertical. 
 
@@ -130,7 +130,7 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 ### Vista de Despliegue
 
-![context-view](docs/img/Arquitecture.png)
+![deployment-view](docs/img/Arquitecture.png)
 
 *Cluster AKS:* Un nodo tipo Standard_DS2_v2, 2 vCPUs, 7 GiB de memoria Ram. Se crean 5 replicas (POD) para balancear la carga.
 
@@ -163,7 +163,7 @@ dotnet build
 
 4. Si el proceso de build se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
 
-![context-view](docs/img/build.png)
+![build](docs/img/Build.png)
 
 5. Para ejecutar las pruebas unitarias, ingresar a la carpeta que contiene las pruebas unitarias: Meli.DNAAnalyzer.UnitTests
 
@@ -179,7 +179,7 @@ dotnet test
 
 7. Si la ejecución de las pruebas unitarias se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
 
-![context-view](docs/img/tests.png)
+![tests](docs/img/Tests.png)
 
 8. Para ejecutar las pruebas de integración, primero se debe verificar que toda la infraestructura esté correctamente desplegada y operativa. En caso de que si, ingresar a la carpeta que contiene las pruebas de integración: Meli.DNAAnalyzer.IntegrationTests
 
@@ -203,7 +203,7 @@ Se construyó una tubería de despliegue al AKS de pruebas, con el fin de realiz
 4. Se crea pull secret en namespace *mutant* con el fin de poder conectarse al ACR y obtener la imagen.
 5. Se crea deployment y service en aks de prueba mediante los archivos [deployment.yml](deploy/k8s/deployment.yml) y  [service.yml](deploy/k8s/service.yml).
 
-![context-view](docs/img/release.png)
+![release](docs/img/release.png)
 
 # Access Endpoint
 

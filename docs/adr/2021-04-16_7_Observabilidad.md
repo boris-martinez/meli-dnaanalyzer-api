@@ -12,11 +12,11 @@ This is the template in [Documenting architecture decisions - Michael Nygard](ht
 
 * **Decision**: Se selecciona Azure Application Insight como herramienta de observabilidad. Application Insight es una herramienta de observablidad y monitoreo administrada por Azure, mediante la cual una aplicación puede reportar toda la telemetría de ejecución, y logs de errores. Su costo varia en función de la cantidad de datos ingestados.  A continuación un ejemplo de como se presentan las métricas para el analizador de DNA:
 
-  ![context-view](img/insights1.png)
+  ![insights1](img/insights1.png)
 
-  ![context-view](img/insights2.png)
+  ![insights2](img/insights2.png)
 
-  ![context-view](img/insights3.png)
+  ![insights3](img/insights3.png)
 
   
 
