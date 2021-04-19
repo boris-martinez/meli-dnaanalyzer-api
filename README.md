@@ -63,11 +63,11 @@ Test-Automáticos, Code coverage > 80%.
 
 A continuación se listan (el orden establece la prioridad) los atributos de calidad que debe soportar el sistema:
 
-1. **Rendimiento**: Se requiere que tanto el proceso de análisis de DNA, como el de telemetría, sean lo mas eficiente posible en términos de cpu y memoria y genere las respuestas en el menor tiempo posible (300  ms en promedio).
+1. **Rendimiento**: Se requiere que tanto el proceso de análisis de DNA, como el de telemetría, sean lo mas eficiente posible en términos de cpu y memoria y genere las respuestas en el menor tiempo posible (50  ms en promedio) para lograr un thoughput de 100 y 1 millón de peticiones por segundo.
 
    
 
-2. **Escalabilidad**: El sistema debe soportar entre 100 y 1 millón de peticiones por segundo.
+2. **Escalabilidad**: El sistema debe estar en la capacidad de auto-escalar para soportar entre 100 y 1 millón de peticiones por segundo.
 
    
 
@@ -85,7 +85,7 @@ A continuación se listan (el orden establece la prioridad) los atributos de cal
 
 De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
-1. El ambiente de despliegue es limitado y de bajo costo, por lo tanto los componentes tendrán restricciones de escalabilidad en escenarios de pruebas de carga.
+1. El ambiente de despliegue es limitado y de bajo presupuesto, por lo tanto los componentes tendrán limitaciones de escalabilidad en escenarios de pruebas de carga.
 
    
 
@@ -101,11 +101,11 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
    
 
-5. Al principio del enunciado se restringe la implementación del desarrollo a los siguientes lenguajes: Java / Golang / C-C++ / Javascript (node) / Python / Ruby). Sin embargo mas adelante se indica que puede ser desarrollado en cualquier otro lenguaje. Por lo tanto se opta por hacer la implementación en c#.
+5. Al principio del enunciado se restringe la implementación del desarrollo a los siguientes lenguajes: Java / Golang / C-C++ / Javascript (node) / Python / Ruby). Sin embargo mas adelante se indica que puede ser desarrollado en cualquier otro lenguaje. Por lo tanto se opta por hacer la implementación de la API en c#.
 
    
 
-6. Se asume que dos o mas secuencias de 4 letras iguales de ADN se pueden solapar, siempre y cuando sean de direcciones diferentes. Este tipo de secuencias contarán para determinar si un humano es mutante o no.
+6. Se asume que dos o mas secuencias de 4 letras iguales de ADN se pueden solapar, siempre y cuando sean de direcciones diferentes. Este tipo de secuencias serán válidas para determinar si un humano es mutante o no.
 
    
 
@@ -113,7 +113,7 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
    
 
-8. Se asume que la solicitud de almacenamiento del DNA es para fines estadísticos, telemetría o BAM (Business Activity Monitoring).
+8. Se asume que la solicitud de almacenamiento de la cadena DNA es para fines estadísticos, telemetría o BAM (Business Activity Monitoring).
 
 
 
@@ -141,9 +141,9 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 # Devops
 ### Build and Tests
 
-El DNA Analyzer API corre sobre [.NET Core 3.1](https://dotnet.microsoft.com/download) , por lo tanto asegurarse de tener instalado dicho framework en la maquina donde se va a compilar.  Para compilar y ejecutar las pruebas seguir las siguientes pasos:
+El DNA Analyzer API corre sobre [.NET Core 3.1](https://dotnet.microsoft.com/download) , por lo tanto asegurarse de tener instalado dicho framework en la maquina donde se va a compilar.  Para compilar y ejecutar las pruebas seguir los siguientes pasos:
 
-1. Clonar el proyecto del repositorio de código fuente en cualquier carpeta de su maquina local:
+1. Clonar el proyecto desde el repositorio de código fuente en cualquier carpeta de su maquina local:
 
 ```
 git clone https://github.com/boris-martinez/meli-dnaanalyzer-api.git
@@ -181,13 +181,13 @@ dotnet test
 
 ![tests](docs/img/Tests.png)
 
-8. Para ejecutar las pruebas de integración, primero se debe verificar que toda la infraestructura esté correctamente desplegada y operativa. En caso de que si, ingresar a la carpeta que contiene las pruebas de integración: Meli.DNAAnalyzer.IntegrationTests
+8. Para ejecutar las pruebas de integración, primero se debe *verificar que toda la infraestructura esté correctamente desplegada y operativa*. En caso de que si, ingresar a la carpeta que contiene las pruebas de integración: Meli.DNAAnalyzer.IntegrationTests
 
 ```
 cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.IntegrationTests
 ```
 
-9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. Si la ejecución de las pruebas unitarias se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
+9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. Si la ejecución de las pruebas de integración se realizó correctamente, se debe mostrar el resultado de la siguiente manera:
 
 ![tests](docs/img/IntegrationTests.png)
 
