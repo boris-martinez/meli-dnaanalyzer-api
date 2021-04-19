@@ -136,7 +136,7 @@ De igual forma se plantean las siguientes *restricciones* y *suposiciones*:
 
 *Cluster Logstach*: Un nodo tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
 
-*Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram.
+*Cluster Elasticsearch*: Dos nodos tipo Standard DS1 v2, 1 vCPUs, 3.5 GiB de memoria Ram. Se despliega pipeline de procesamiento descrito en el archivo [logstash.conf](deploy/logstash/logstash.conf).
 
 # Devops
 ### Build and Tests
@@ -188,6 +188,10 @@ cd meli-dnaanalyzer-api/src/Meli.DNAAnalyzer.IntegrationTests
 ```
 
 9. Ejecutar las pruebas de integración con el mismo comando que se ejecutaron las pruebas unitarias. 
+
+10. Ejecutar las pruebas de carga a través de [JMeter](https://jmeter.apache.org/) configurando el plan [DnaAnalyzer.jmx](src/Meli.DNAAnaluzer.LoadTests/DnaAnalyzer.jmx).
+
+
 
 ### Release
 
